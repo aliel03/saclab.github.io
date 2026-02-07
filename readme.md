@@ -41,8 +41,6 @@ The original back-end (APIs, authentication, internal data) was hosted on intern
 > ⚠️ In this repository, you will mainly find the React front-end of the SacLab portal.
 > The Express back-end and some Angular-based internal tools were also developed during my internship, but they were hosted on the ISAE-SUPAERO GitLab and I no longer have access to them, so they are not included here.
 
-> The Express back-end and some Angular-based internal tools were developed during the internship but could not be published (internal code).
-
 ---
 
 ## 🧩 Main Features of the Front-End
