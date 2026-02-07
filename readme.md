@@ -1,64 +1,101 @@
-# SacLAB Website
+# SacLab Web Portal – Front-End
 
-## Getting Started
+This repository contains the **front-end** of a web portal built for the **Space Advanced Concepts Lab (SacLab)** at ISAE-SUPAERO.  
+It was developed during my technical internship as a **web developer** in the SacLab team.
 
-This guide will help you set up the SacLAB website on your local machine. Follow the instructions below according to your operating system.
+🔗 **Live demo:**  
+https://aliel03.github.io/saclab.github.io/
 
-### Prerequisites
+---
 
-Ensure you have the following installed on your system:
+## 🌍 Project in a Few Words
 
-- Git
-- Node.js and npm
+The goal of this project was to provide SacLab with a modern web interface to:
 
-### Installation
+- present the **chair, missions and partners**,  
+- showcase **research themes, tools and student projects**,  
+- centralise **internal and external communications**,  
+- give access to **teaching and tools** used in the lab. :contentReference[oaicite:0]{index=0}  
 
-#### Cloning the Project
+This repository focuses on the **front-end implementation**.  
+The original back-end (APIs, authentication, internal data) was hosted on internal servers and is **not included here**.
 
-First, clone the project from GitLab to your local machine:
+---
 
-```sh
-git clone https://github.com/SacLab-isae/website.git
-```
+## 🎯 What I Worked On During the Internship
 
-Navigate to the project directory:
+**Role:** Technical intern – web development (SacLab Team)  
+**Scope:**
 
-```sh
-cd website
-```
+- Development and maintenance of **internal web tools** for the lab.
+- Implementation of pages and components for the **SacLab web portal** (this repository).
+- Collaboration on an **SOA-oriented architecture** (front-end + micro-services / APIs).
+- Participation in **test and validation automation** for some internal tools.
 
-#### Installing Dependencies
+**Technologies used during the internship:**
 
-Install the required dependencies using npm:
+- Front-end: **React**, **Angular**, **TailwindCSS**
+- Back-end / APIs: **Express** (Node.js)
+- Dev & tooling: **Git**, **Docker**
 
-```sh
+> ⚠️ In this repository, you will mainly find the React front-end of the SacLab portal.
+> The Express back-end and some Angular-based internal tools were also developed during my internship, but they were hosted on the ISAE-SUPAERO GitLab and I no longer have access to them, so they are not included here.
+
+> The Express back-end and some Angular-based internal tools were developed during the internship but could not be published (internal code).
+
+---
+
+## 🧩 Main Features of the Front-End
+
+From the live version, the front-end provides: :contentReference[oaicite:1]{index=1}  
+
+- A **bilingual interface** (English / French) with navigation in both languages.
+- A structured **navigation bar** with:
+  - *Home* and *Last News*,
+  - *ADM* section (Chair, Materials, Internal/External Comms),
+  - *Research* (Launcher, Exploration, Orbital Systems / SST / STM),
+  - *Education* (FISE, MAE, MASTER, Student Projects),
+  - *Tools* (Gigante, Sempy, Ecocel, Nanostar, Nanospace, JSatorb, Luplink, HyCube, Alice, Satnogs Station),
+  - *Members Area*.
+- Several content sections explaining:
+  - **Who we are / missions of the chair**,  
+  - **Research topics and tools**,  
+  - **Presentation of projects and facilities**. :contentReference[oaicite:2]{index=2}  
+- A **responsive layout** that adapts to desktop screens (and can easily be extended to mobile).
+- A footer with **contact information, map and links**.
+
+Even without the original back-end, this front-end demonstrates:
+
+- navigation and layout,
+- content structure,
+- static pages that can be wired to real APIs.
+
+---
+
+## 🛠️ Tech Stack (Front-End)
+
+The project is designed as a **single-page application** with reusable components.
+
+- **React** – main front-end framework.
+- **TailwindCSS** – utility-first CSS for layout, spacing and typography.
+- **HTML / JSX** – page structure and components.
+- **GitHub Pages** – hosting of the static build (`gh-pages`).
+
+> During the internship, I also worked with **Express** for APIs, **Angular** on other internal tools, and **Docker** to containerise some services, but these parts are not included in this public repo.
+
+---
+
+## 🚀 How to Run Locally (Typical React Setup)
+
+If you clone this project and it contains the React source code (e.g. `package.json`, `src/`, etc.), you can run:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/aliel03/saclab.github.io.git
+cd saclab.github.io
+
+# 2. Install dependencies
 npm install
-```
 
-### Running the Local Server
-
-To view the website locally, you need to set up a local server using Node.js.
-
-#### Start the Local Server
-
-Run the following command to start the server:
-
-```sh
-node server.js
-```
-
-#### Open Your Browser
-
-Navigate to the following URL to view the website:
-
-```sh
-http://localhost:3000/content/home/index.html
-```
-
-## Project Structure
-
-Here is the folder structure:
-
-- `content/`: Contains all the HTML files and content for different sections of the website.
-- `assets/`: Includes all the static assets such as CSS files, JavaScript files, images, and fonts used throughout the website.
-- `forms/`: Holds the HTML forms for user interactions such as sign-up and sign-in pages.
+# 3. Start the development server
+npm start
